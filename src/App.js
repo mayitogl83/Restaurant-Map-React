@@ -10,7 +10,6 @@ class App extends Component {
 
   componentDidMount() {
     this.addVenues()
-    this.loadMap()
   }
 
   loadMap = ()=> {
@@ -25,12 +24,25 @@ class App extends Component {
       zoom: 13
     });
 
-   var newyork = {lat: 40.7413549, lng: -73.9980244};
+    var infowindow = new window.google.maps.InfoWindow();
+
+    this.state.venues.map(myVenue => {
+    var contentString = `${myVenue.venue.name}
+    ${myVenue.venue.location.address}`;
+
+
     var marker = new window.google.maps.Marker({
-            position: newyork,
+            position: {lat: myVenue.venue.location.lat,
+            lng: myVenue.venue.location.lng},
             map: map,
-            title: 'My Marker!'
+            title: myVenue.venue.name
     });
+
+    marker.addListener('click', function() {
+       infowindow.open(map, marker);
+       infowindow.setContent(contentString)
+  });
+    })
   }
 
   addVenues = ()=> {
@@ -47,7 +59,7 @@ class App extends Component {
     .then(response => {
       this.setState({
         venues: response.data.response.groups[0].items
-      })
+      }, this.loadMap())
     })
     .catch(error => {
       console.log("ERROR" + error)
