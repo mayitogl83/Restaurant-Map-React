@@ -100,3 +100,76 @@ ul {
   top: 25px;
   right: 30px;
 }
+@media screen and (max-width:500px) {
+  html, body {
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+  }
+  #main {
+    margin-left: 0;
+  }
+  .map-container {
+    width: 100%;
+    height: 100%;
+  }
+  #map {
+    width: 485px;
+    height: 325px;
+
+  }
+  .top-bar {
+    width: 485px;
+    height: 35px;
+  }
+  .header {
+    font-size: 20px;
+    margin-left: 35%;
+    margin-right: 30%
+  }
+  .filter {
+    height: 15px;
+  }
+  .list-header {
+    font-size: 20px;
+    margin-top: -10px;
+    margin-left: 35%;
+    color: #fff;
+  }
+  .sidenav {
+    width: 100%;
+    padding-top: 5px;
+    height: 50%;
+    top: 410px;
+    left: 0;
+    background-color: #303030;
+
+  }
+  .sidenav button{
+    margin-left: -8px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    background-color: #303030;
+    color: #818181;
+    width: 100%;
+  }
+  .sidenav button:hover, button:focus {
+      cursor: pointer;
+      color: #484848;
+      background-color: #fff;
+  }
+  .filter-field {
+    width: 100%;
+  }
+  .filter {
+    width: 50%;
+    margin-top: 5px;
+    padding-left:15px;
+    margin-left: 20%;
+  }
+}
