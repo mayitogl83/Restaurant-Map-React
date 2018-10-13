@@ -1,71 +1,102 @@
-#map {
-  height: 100vh
-}
+
 html, body {
   font-family: "Lato", sans-serif;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
+.map {
+  height: 96vh;
+}
 /*top bar style*/
 .top-bar {
-  height: 40px;
+  height: 30px;
   background-color: #484848;
   color: #fff;
-  display: flex;
 }
 .header {
-  margin-top: 10px;
-  margin-left: 40%;
+  margin-left: 25%;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 0;
 }
 .menu {
-  margin-top: 7px;
-  margin-left: 25px;
+  margin-top: 3px;
+  margin-left: 15px;
   cursor: pointer;
 }
 /*togle menu style*/
 #main {
-    transition: margin-left .5s;
+  margin-left: 250px;
 }
-#closebtn:hover {
-  background-color: #303030;
-  color: #fff;
+#closebtn:hover, #closebtn:focus {
+  color: #303030;
 }
 .sidenav {
+  width: 250px;
   padding-top: 5px;
   height: 100%;
-  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #303030;
   overflow-x: hidden;
-  transition: 0.5s;
 }
 
-.sidenav a {
-  padding: 8px 0px 8px 25px;
-  text-decoration: none;
-  font-size: 15px;
+.sidenav button{
+  margin-left: -8px;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  background-color: #303030;
   color: #818181;
-  display: block;
+  width: 250px;
+}
+.filter {
+  width: 195px;
+  margin-top: 5px;
+  padding-left:15px;
+  margin-left: 10px;
+}
+.filter-field {
+  margin-top: -5px;
+  height: 60px;
+  width: 250px;
+  position: fixed;
+  background: #303030;
 
 }
-
-.sidenav a:hover {
-    color: #818181;
+#place-title {
+  color: #484848;
+  font-size: 15px;
+}
+.list-header {
+  margin-top: 5px;
+  margin-left: 25%;
+  color: #fff;
+}
+ul {
+  margin-top: 55px;
+  padding: 0;
+}
+.sidenav li {
+  list-style: none;
+  text-align: center;
+}
+.sidenav button:hover, button:focus {
+    cursor: pointer;
+    color: #484848;
     background-color: #fff;
 }
 
 .sidenav .closebtn {
+  color: #818181;
   font-size: 25px;
   cursor: pointer;
   position: absolute;
-  top: 1px;
-  right: 25px;
-  margin-left: 50px;
-}
-#search:hover {
-  background-color: #303030;
+  top: 25px;
+  right: 30px;
 }
